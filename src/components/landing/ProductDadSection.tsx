@@ -2,7 +2,7 @@ import dadsMini from "@/assets/product-dads-mini.jpg";
 
 const ProductDadSection = () => {
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section id="produtos" className="py-20 md:py-28 px-6 scroll-mt-0">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="overflow-hidden">
           <img
