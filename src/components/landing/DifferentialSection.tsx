@@ -10,16 +10,20 @@ const DifferentialSection = () => {
           </h2>
           <div className="space-y-5 font-sans text-base font-light leading-relaxed text-muted-foreground">
             <p>
-              Cada peça Panqueca nasce de uma modelagem exclusiva — desenhada aqui,
+              Os Bodys Over da Panqueca nascem de uma modelagem exclusiva — desenhada aqui,
               não copiada de catálogos industriais.
             </p>
             <p>
-              A modelagem é propositalmente mais solta, mais generosa.
+              A estrutura é propositalmente mais solta, mais generosa.
               Permite que o bebê se mova com liberdade total, sem costuras
               que apertam ou tecidos que limitam.
             </p>
             <p>
-              Não é padrão de mercado. É padrão Panqueca.
+              Cada detalhe foi pensado para o uso real — para acompanhar o corpo em movimento,
+              não para restringir.
+            </p>
+            <p>
+              Não é padrão de mercado. É o padrão dos Bodys Over Panqueca.
             </p>
           </div>
         </div>
