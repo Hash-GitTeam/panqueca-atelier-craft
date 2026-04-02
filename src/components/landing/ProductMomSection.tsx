@@ -32,7 +32,7 @@ const ProductMomSection = () => {
             href="#"
             className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
           >
-            Ver detalhes
+            Comprar agora
           </a>
         </div>
         <div className="overflow-hidden order-1 md:order-2">

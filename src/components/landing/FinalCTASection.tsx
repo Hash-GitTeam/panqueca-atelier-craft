@@ -24,7 +24,7 @@ const FinalCTASection = () => {
           Descubra por que os Bodys Over da Panqueca são os Best-Sellers da marca.
         </p>
         <a
-          href="#"
+          href="#produtos"
           className="inline-block font-sans text-sm tracking-wide bg-primary text-primary-foreground px-10 py-4 hover:opacity-90 transition-opacity duration-300"
         >
           Ver detalhes

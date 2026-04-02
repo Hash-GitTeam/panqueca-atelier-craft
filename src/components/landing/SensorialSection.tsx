@@ -19,6 +19,12 @@ const SensorialSection = () => {
               vai saber que escolheu certo.
             </p>
           </div>
+          <a
+            href="#produtos"
+            className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300 mt-8"
+          >
+            Ver detalhes
+          </a>
         </div>
         <div className="relative">
           <img

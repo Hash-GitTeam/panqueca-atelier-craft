@@ -42,7 +42,7 @@ const ProductDadSection = () => {
             href="#"
             className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
           >
-            Ver detalhes
+            Comprar agora
           </a>
         </div>
       </div>
