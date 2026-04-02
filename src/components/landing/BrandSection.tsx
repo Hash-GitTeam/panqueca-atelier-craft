@@ -1,4 +1,4 @@
-import { PenTool, Hand, Gem, Scissors, Clock } from "lucide-react";
+import { PenTool, Hand, Gem, Scissors, Clock, Ruler } from "lucide-react";
 
 const values = [
   { text: "Peças autorais, desenhadas uma a uma", icon: PenTool },
@@ -6,6 +6,7 @@ const values = [
   { text: "Edições limitadas — não massificado", icon: Gem },
   { text: "Acabamento superior em cada costura", icon: Scissors },
   { text: "Estética atemporal, fora de tendências", icon: Clock },
+  { text: "Modelagem exclusiva e autoral", icon: Ruler },
 ];
 
 const BrandSection = () => {
