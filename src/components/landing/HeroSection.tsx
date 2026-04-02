@@ -20,10 +20,12 @@ const HeroSection = () => {
           Panqueca — Ateliê Infantil
         </p>
         <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-6 text-espresso">
-          Existe um jeito diferente de vestir um bebê.
+          Liberdade para se mover.
+          <br />
+          Conforto para ser bebê.
         </h1>
         <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-10 max-w-lg mx-auto">
-          Mais do que roupa — presença, vínculo e cuidado em cada detalhe.
+          Body com modelagem autoral, pensado para acompanhar cada movimento — com estética que foge do comum.
         </p>
         <a
           href="#produtos"

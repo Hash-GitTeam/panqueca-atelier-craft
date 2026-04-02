@@ -1,0 +1,53 @@
+import momsMini from "@/assets/product-moms-mini.jpg";
+
+const ProductMomSection = () => {
+  return (
+    <section className="py-20 md:py-28 px-6 bg-card">
+      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="order-2 md:order-1">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">
+            Best seller
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-5">
+            Body Over Mom's Mini
+          </h2>
+          <p className="font-sans text-base font-light leading-relaxed text-muted-foreground mb-8">
+            O colo da mãe traduzido em roupa. Suavidade no toque, leveza no
+            caimento e a delicadeza de quem cuida nos mínimos detalhes.
+          </p>
+          <ul className="space-y-3 mb-10">
+            {[
+              "Algodão premium com acabamento delicado",
+              "Modelagem over exclusiva Panqueca",
+              "Botões de pressão funcionais",
+              "Cores: caramelo e bege natural",
+            ].map((f, i) => (
+              <li key={i} className="font-sans text-sm text-foreground/70 flex items-start gap-2">
+                <span className="block w-1 h-1 rounded-full bg-caramel mt-2 flex-shrink-0" />
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#"
+            className="inline-block font-sans text-sm tracking-wide border border-foreground/30 px-8 py-3.5 text-foreground/90 hover:bg-foreground/5 transition-colors duration-300"
+          >
+            Ver detalhes
+          </a>
+        </div>
+        <div className="overflow-hidden order-1 md:order-2">
+          <img
+            src={momsMini}
+            alt="Body Over Mom's Mini — body de moletom caramelo no corpo do bebê"
+            className="w-full aspect-[3/4] object-cover"
+            loading="lazy"
+            width={800}
+            height={1067}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductMomSection;
