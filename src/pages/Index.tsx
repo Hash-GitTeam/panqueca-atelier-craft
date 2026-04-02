@@ -1,8 +1,9 @@
 import { lazy, Suspense } from "react";
 import HeroSection from "@/components/landing/HeroSection";
 
-const ProblemSection = lazy(() => import("@/components/landing/ProblemSection"));
+const PositioningSection = lazy(() => import("@/components/landing/PositioningSection"));
 const DifferentialSection = lazy(() => import("@/components/landing/DifferentialSection"));
+const ProblemSection = lazy(() => import("@/components/landing/ProblemSection"));
 const ProductDadSection = lazy(() => import("@/components/landing/ProductDadSection"));
 const ProductMomSection = lazy(() => import("@/components/landing/ProductMomSection"));
 const BrandSection = lazy(() => import("@/components/landing/BrandSection"));
@@ -15,8 +16,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <HeroSection />
       <Suspense fallback={null}>
-        <ProblemSection />
+        <PositioningSection />
         <DifferentialSection />
+        <ProblemSection />
         <ProductDadSection />
         <ProductMomSection />
         <BrandSection />
