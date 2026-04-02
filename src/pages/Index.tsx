@@ -16,9 +16,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <HeroSection />
       <Suspense fallback={null}>
-        <ProblemSection />
+        <PositioningSection />
         <DifferentialSection />
-        <ProductDadSection />
+        <ProblemSection />
         <ProductMomSection />
         <BrandSection />
         <SensorialSection />
