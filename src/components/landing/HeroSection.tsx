@@ -70,7 +70,7 @@ const HeroSection = () => {
         <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-8">
           Panqueca — Ateliê Infantil
         </p>
-        <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-6 text-espresso drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]">
+        <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-6 text-espresso">
           {slide.title}
         </h1>
         <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-10 max-w-lg mx-auto">
