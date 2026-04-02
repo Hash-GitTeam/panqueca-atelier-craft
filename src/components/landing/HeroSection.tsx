@@ -59,7 +59,7 @@ const HeroSection = () => {
             height={800}
             fetchPriority={i === 0 ? "high" : undefined}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
         </div>
       ))}
 
