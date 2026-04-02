@@ -40,7 +40,7 @@ const ProductDadSection = () => {
           </ul>
           <a
             href="#"
-            className="inline-block font-sans text-sm tracking-wide border border-foreground/30 px-8 py-3.5 text-foreground/90 hover:bg-foreground/5 transition-colors duration-300"
+            className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
           >
             Ver detalhes
           </a>
