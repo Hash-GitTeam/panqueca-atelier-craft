@@ -67,13 +67,13 @@ const HeroSection = () => {
         className="relative z-10 text-center px-6 max-w-2xl mx-auto pt-20 transition-opacity duration-500 ease-in-out"
         style={{ opacity: isTransitioning ? 0 : 1 }}
       >
-        <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-8">
+        <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/90 mb-8">
           Panqueca — Ateliê Infantil
         </p>
-        <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-6 text-espresso">
+        <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-6 text-espresso" style={{ textShadow: '0 1px 8px rgba(255,255,255,0.5)' }}>
           {slide.title}
         </h1>
-        <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-10 max-w-lg mx-auto">
+        <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/90 mb-10 max-w-lg mx-auto" style={{ textShadow: '0 1px 6px rgba(255,255,255,0.4)' }}>
           {slide.description}
         </p>
         <a
