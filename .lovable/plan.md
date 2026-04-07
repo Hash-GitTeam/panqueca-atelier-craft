@@ -1,30 +1,30 @@
 
 
-## Plano: Substituir imagens do site por fotos reais
+## Plano: Reposicionar texto da Hero para o lado direito (desktop)
 
 ### Resumo
-Substituir 7 imagens placeholder por fotos reais da marca enviadas pelo usuario, incluindo implementacao de imagem responsiva no Hero (desktop vs mobile).
+No desktop, mover o bloco de texto (título, descrição e botão) para o lado direito da imagem, alinhado à direita. No mobile, manter centralizado como está hoje.
 
-### Arquivos de imagem a copiar
+### Alteração
 
-| Upload | Destino |
-|---|---|
-| `Desktop_Hero_Banner_1.webp` | `src/assets/hero-panqueca.jpg` (substituir) |
-| `Mobile_Hero_Banner_1.webp` | `src/assets/hero-panqueca-mobile.webp` (novo) |
-| `Seção_Marca_Autoral.webp` | `src/assets/detail-texture.jpg` (substituir) |
-| `Body_Over_Dad_s_Mini.webp` | `src/assets/product-dads-mini.jpg` (substituir) |
-| `Body_Over_Mom_s_Mini.webp` | `src/assets/product-moms-mini.jpg` (substituir) |
-| `Você_não_pode_tocar_agora.webp` | `src/assets/sensorial-texture.jpg` (substituir) |
-| `CTA_PL.webp` | `src/assets/cta-panqueca.jpg` (substituir) |
+**Arquivo:** `src/components/landing/HeroSection.tsx`
 
-### Alteracoes em codigo
+- Trocar o container de texto de `text-center max-w-2xl mx-auto` para usar `flex items-center justify-end` no desktop
+- No desktop (`md:`): texto alinhado à direita com `md:text-right md:items-end md:ml-auto md:mr-16`
+- No mobile: manter centralizado (`text-center`)
+- O gradiente será ajustado para `bg-gradient-to-l` (da direita para esquerda) no desktop, criando mais contraste onde o texto ficará
+- Os indicadores de slide permanecem centralizados na parte inferior
 
-**1. `src/components/landing/HeroSection.tsx`**
-- Importar a imagem mobile: `hero-panqueca-mobile.webp`
-- Adicionar campo `mobileImage` ao primeiro slide do carrossel
-- Usar o hook `useIsMobile()` para selecionar a imagem correta (desktop 16:9 ou mobile 9:16) no render
-- O slide 2 (Mom's Mini) continua com a imagem atual `hero-panqueca-mom.jpg` (nao foi enviada substituta)
+### Detalhes técnicos
 
-### Secoes que NAO precisam de alteracao de codigo
-As demais imagens mantem os mesmos nomes de arquivo, entao os imports existentes em `DifferentialSection`, `ProductDadSection`, `ProductMomSection`, `SensorialSection` e `FinalCTASection` continuarao funcionando automaticamente apos a copia.
+O `div` do conteúdo textual (linha 71-90) terá suas classes alteradas de:
+```
+text-center px-6 max-w-2xl mx-auto pt-20
+```
+Para:
+```
+text-center md:text-right px-6 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-16 pt-20
+```
+
+O gradiente (linha 67) será atualizado para ter mais cobertura do lado direito no desktop, mantendo a legibilidade do texto na nova posição.
 
