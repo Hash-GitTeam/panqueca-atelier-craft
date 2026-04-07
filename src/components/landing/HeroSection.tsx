@@ -22,6 +22,7 @@ const slides = [
 ];
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
