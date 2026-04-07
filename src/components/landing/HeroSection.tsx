@@ -48,63 +48,67 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-24 md:pb-0">
-      {/* Preload both images */}
-      {slides.map((s, i) => (
-        <div
-          key={i}
-          className="absolute inset-0 transition-opacity duration-700 ease-in-out"
-          style={{ opacity: i === current && !isTransitioning ? 1 : 0 }}
-        >
-          <img
-            src={isMobile && s.mobileImage ? s.mobileImage : s.image}
-            alt={s.alt}
-            className="w-full h-full object-cover"
-            width={1200}
-            height={800}
-            fetchPriority={i === 0 ? "high" : undefined}
-          />
-          <div className="hero-image-overlay absolute inset-0" />
-        </div>
-      ))}
-
-      <div
-        className="relative z-10 text-center md:text-right px-6 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-16 pt-20 flex flex-col items-center md:items-end transition-opacity duration-500 ease-in-out"
-        style={{ opacity: isTransitioning ? 0 : 1 }}
-      >
-        <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-8">
-          Panqueca — Ateliê Infantil
-        </p>
-        <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-6 text-espresso">
-          {slide.title}
-        </h1>
-        <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-10 max-w-lg mx-auto">
-          {slide.description}
-        </p>
-        <a
-          href="#produtos"
-          className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
-        >
-          Ver detalhes
-        </a>
-      </div>
-
-      {/* Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
-        {slides.map((_, i) => (
-          <button
+    <>
+      {/* Hero Image - Clean, no overlay */}
+      <section className="relative min-h-screen overflow-hidden">
+        {slides.map((s, i) => (
+          <div
             key={i}
-            onClick={() => goTo(i)}
-            aria-label={`Slide ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === current
-                ? "bg-foreground/70 w-6"
-                : "bg-foreground/30 hover:bg-foreground/50"
-            }`}
-          />
+            className="absolute inset-0 transition-opacity duration-700 ease-in-out"
+            style={{ opacity: i === current && !isTransitioning ? 1 : 0 }}
+          >
+            <img
+              src={isMobile && s.mobileImage ? s.mobileImage : s.image}
+              alt={s.alt}
+              className="w-full h-full object-cover"
+              width={1200}
+              height={800}
+              fetchPriority={i === 0 ? "high" : undefined}
+            />
+          </div>
         ))}
-      </div>
-    </section>
+      </section>
+
+      {/* Info Section */}
+      <section className="bg-background py-12 md:py-16 px-6">
+        <div
+          className="max-w-2xl mx-auto text-center transition-opacity duration-500 ease-in-out"
+          style={{ opacity: isTransitioning ? 0 : 1 }}
+        >
+          <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-6">
+            Panqueca — Ateliê Infantil
+          </p>
+          <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-4 text-espresso">
+            {slide.title}
+          </h1>
+          <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-8 max-w-lg mx-auto">
+            {slide.description}
+          </p>
+          <a
+            href="#produtos"
+            className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
+          >
+            Ver detalhes
+          </a>
+
+          {/* Indicators */}
+          <div className="flex justify-center gap-3 mt-8">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i)}
+                aria-label={`Slide ${i + 1}`}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  i === current
+                    ? "bg-foreground/70 w-6"
+                    : "bg-foreground/30 hover:bg-foreground/50"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
