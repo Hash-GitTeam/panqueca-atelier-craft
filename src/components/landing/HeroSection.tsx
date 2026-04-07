@@ -48,7 +48,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-24 md:pb-0">
       {/* Preload both images */}
       {slides.map((s, i) => (
         <div
