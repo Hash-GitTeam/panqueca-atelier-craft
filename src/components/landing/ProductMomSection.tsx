@@ -29,7 +29,9 @@ const ProductMomSection = () => {
             ))}
           </ul>
           <a
-            href="#"
+            href="https://panquecaparapequenos.com.br/produtos/body-over-moms-mini/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
           >
             Comprar agora
