@@ -1,4 +1,4 @@
-import detailImage from "@/assets/detail-texture.jpg";
+import detailImage from "@/assets/differential-texture.webp";
 
 const DifferentialSection = () => {
   return (
