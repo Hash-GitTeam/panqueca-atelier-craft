@@ -2,27 +2,29 @@ import { useState, useEffect, useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import heroImageDad from "@/assets/hero-panqueca.jpg";
 import heroImageDadMobile from "@/assets/hero-panqueca-mobile.webp";
-import heroImageMom from "@/assets/hero-panqueca-mom.jpg";
+import heroImageMobile2 from "@/assets/hero-panqueca-mobile-2.webp";
 
-const slides = [
+const desktopSlides = [
   {
     image: heroImageDad,
-    mobileImage: heroImageDadMobile,
     alt: "Bebê com Body Over Dad's Mini Panqueca",
-    title: "Body Over Dad's Mini",
-    description: "Modelagem over exclusiva, mais solta e confortável para o dia a dia.",
+  },
+];
+
+const mobileSlides = [
+  {
+    image: heroImageDadMobile,
+    alt: "Bebê com Body Over Dad's Mini Panqueca",
   },
   {
-    image: heroImageMom,
-    mobileImage: undefined as string | undefined,
-    alt: "Mãe segurando bebê com Body Over Mom's Mini Panqueca",
-    title: "Body Over Mom's Mini",
-    description: "Modelagem over exclusiva, mais solta e confortável para o dia a dia.",
+    image: heroImageMobile2,
+    alt: "Bebê com Body Over Dad's Mini Panqueca — foto 2",
   },
 ];
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
+  const slides = isMobile ? mobileSlides : desktopSlides;
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -38,14 +40,19 @@ const HeroSection = () => {
     [current, isTransitioning]
   );
 
+  // Reset current when slides change (e.g. resize desktop→mobile)
   useEffect(() => {
+    setCurrent(0);
+  }, [isMobile]);
+
+  // Auto-play only when more than 1 slide
+  useEffect(() => {
+    if (slides.length <= 1) return;
     const timer = setInterval(() => {
-      goTo(current === 0 ? 1 : 0);
+      goTo((current + 1) % slides.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, [current, goTo]);
-
-  const slide = slides[current];
+  }, [current, goTo, slides.length]);
 
   return (
     <>
@@ -58,7 +65,7 @@ const HeroSection = () => {
             style={{ opacity: i === current && !isTransitioning ? 1 : 0 }}
           >
             <img
-              src={isMobile && s.mobileImage ? s.mobileImage : s.image}
+              src={s.image}
               alt={s.alt}
               className="w-full h-full object-cover"
               width={1200}
@@ -67,32 +74,10 @@ const HeroSection = () => {
             />
           </div>
         ))}
-      </section>
 
-      {/* Info Section */}
-      <section className="bg-background py-12 md:py-16 px-6">
-        <div
-          className="max-w-2xl mx-auto text-center transition-opacity duration-500 ease-in-out"
-          style={{ opacity: isTransitioning ? 0 : 1 }}
-        >
-          <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-6">
-            Panqueca — Ateliê Infantil
-          </p>
-          <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-4 text-espresso">
-            {slide.title}
-          </h1>
-          <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-8 max-w-lg mx-auto">
-            {slide.description}
-          </p>
-          <a
-            href="#produtos"
-            className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
-          >
-            Ver detalhes
-          </a>
-
-          {/* Indicators */}
-          <div className="flex justify-center gap-3 mt-8">
+        {/* Indicators - bottom of hero image (only if multiple slides) */}
+        {slides.length > 1 && (
+          <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 z-10">
             {slides.map((_, i) => (
               <button
                 key={i}
@@ -100,12 +85,33 @@ const HeroSection = () => {
                 aria-label={`Slide ${i + 1}`}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   i === current
-                    ? "bg-foreground/70 w-6"
-                    : "bg-foreground/30 hover:bg-foreground/50"
+                    ? "bg-white/90 w-6"
+                    : "bg-white/50 hover:bg-white/70"
                 }`}
               />
             ))}
           </div>
+        )}
+      </section>
+
+      {/* Info Section */}
+      <section className="bg-background py-12 md:py-16 px-6">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-6">
+            Panqueca — Ateliê Infantil
+          </p>
+          <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-4 text-espresso">
+            Body Over Dad's / Mom's Mini
+          </h1>
+          <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-8 max-w-lg mx-auto">
+            Modelagem over exclusiva, mais solta e confortável para o dia a dia.
+          </p>
+          <a
+            href="#produtos"
+            className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
+          >
+            Ver detalhes
+          </a>
         </div>
       </section>
     </>
