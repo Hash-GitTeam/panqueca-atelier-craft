@@ -1,16 +1,20 @@
 import { useState, useEffect, useCallback } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import heroImageDad from "@/assets/hero-panqueca.jpg";
+import heroImageDadMobile from "@/assets/hero-panqueca-mobile.webp";
 import heroImageMom from "@/assets/hero-panqueca-mom.jpg";
 
 const slides = [
   {
     image: heroImageDad,
+    mobileImage: heroImageDadMobile,
     alt: "Bebê com Body Over Dad's Mini Panqueca",
     title: "Body Over Dad's Mini",
     description: "Modelagem over exclusiva, mais solta e confortável para o dia a dia.",
   },
   {
     image: heroImageMom,
+    mobileImage: undefined as string | undefined,
     alt: "Mãe segurando bebê com Body Over Mom's Mini Panqueca",
     title: "Body Over Mom's Mini",
     description: "Modelagem over exclusiva, mais solta e confortável para o dia a dia.",
@@ -18,6 +22,7 @@ const slides = [
 ];
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -52,7 +57,7 @@ const HeroSection = () => {
           style={{ opacity: i === current && !isTransitioning ? 1 : 0 }}
         >
           <img
-            src={s.image}
+            src={isMobile && s.mobileImage ? s.mobileImage : s.image}
             alt={s.alt}
             className="w-full h-full object-cover"
             width={1200}
