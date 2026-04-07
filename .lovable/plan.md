@@ -1,47 +1,22 @@
 
 
-## Plano: Separar Hero em foto limpa + seção de informações
+## Plano: Reduzir altura da Hero no mobile para mostrar preview da próxima seção
 
 ### Resumo
-Remover o overlay e o texto de cima da imagem da Hero. Criar uma nova seção logo abaixo com as informações (título, descrição, botão, indicadores de slide). A foto fica 100% limpa.
+No mobile, trocar `min-h-screen` por uma altura menor (ex: `85vh`) para que o início da seção de informações apareça no primeiro frame. No desktop, manter `min-h-screen`.
 
-### Alterações
+### Alteração
 
-**Arquivo:** `src/components/landing/HeroSection.tsx`
+**Arquivo:** `src/components/landing/HeroSection.tsx` (linha 60)
 
-1. **Bloco da imagem (seção 1):** Manter o carrossel de imagens em tela cheia, mas remover:
-   - O overlay (`hero-image-overlay`)
-   - O bloco de texto (título, descrição, botão)
-   - Os indicadores de slide de dentro desta seção
-
-2. **Nova seção de informações (seção 2):** Logo abaixo da imagem, criar um bloco com fundo `bg-background` contendo:
-   - Label "Panqueca — Ateliê Infantil"
-   - Título do slide atual (ex: "Body Over Dad's Mini")
-   - Descrição do slide
-   - Botão "Ver detalhes" (âncora para `#produtos`)
-   - Indicadores de slide (bolinhas)
-   - Centralizado, com padding generoso (`py-12 px-6`)
-
-3. A lógica do carrossel (auto-play, transição) permanece igual, apenas o conteúdo textual muda de posição.
-
-**Arquivo:** `src/index.css`
-- A classe `.hero-image-overlay` pode ser mantida (não será mais usada na Hero, mas não causa problema).
-
-### Resultado visual
-```text
-┌──────────────────────────┐
-│                          │
-│   Foto Hero (sem filtro) │
-│   (min-h-screen)         │
-│                          │
-└──────────────────────────┘
-┌──────────────────────────┐
-│  Panqueca — Ateliê       │
-│  Body Over Dad's Mini    │
-│  Descrição...            │
-│  [Ver detalhes]          │
-│  ● ○                     │
-└──────────────────────────┘
-│  Restante do site...     │
+Trocar:
 ```
+className="relative min-h-screen overflow-hidden"
+```
+Por:
+```
+className="relative min-h-[85vh] md:min-h-screen overflow-hidden"
+```
+
+Isso faz com que no mobile a imagem ocupe ~85% da tela, deixando visível o topo da seção seguinte e indicando ao usuário que há mais conteúdo abaixo.
 
