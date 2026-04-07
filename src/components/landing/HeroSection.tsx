@@ -57,7 +57,7 @@ const HeroSection = () => {
           style={{ opacity: i === current && !isTransitioning ? 1 : 0 }}
         >
           <img
-            src={s.image}
+            src={isMobile && s.mobileImage ? s.mobileImage : s.image}
             alt={s.alt}
             className="w-full h-full object-cover"
             width={1200}
