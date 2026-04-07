@@ -64,7 +64,7 @@ const HeroSection = () => {
             height={800}
             fetchPriority={i === 0 ? "high" : undefined}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(30,25%,75%/0.55)] via-[hsl(30,25%,75%/0.35)] to-[hsl(30,25%,75%/0.80)] md:bg-gradient-to-l md:from-[hsl(30,25%,75%/0.80)] md:via-[hsl(30,25%,75%/0.50)] md:to-transparent" />
+          <div className="hero-image-overlay absolute inset-0" />
         </div>
       ))}
 
