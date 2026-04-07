@@ -57,7 +57,7 @@ const HeroSection = () => {
   return (
     <>
       {/* Hero Image - Clean, no overlay */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-[85vh] md:min-h-screen overflow-hidden">
         {slides.map((s, i) => (
           <div
             key={i}
