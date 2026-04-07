@@ -77,4 +77,25 @@
   .font-sans {
     font-family: 'Inter', system-ui, sans-serif;
   }
+
+  .hero-image-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--warm) / 0.44) 0%,
+      hsl(var(--warm) / 0.22) 40%,
+      hsl(var(--espresso) / 0.58) 100%
+    );
+  }
+
+  @media (min-width: 768px) {
+    .hero-image-overlay {
+      background: linear-gradient(
+        to left,
+        hsl(var(--warm) / 0.72) 0%,
+        hsl(var(--warm) / 0.4) 34%,
+        hsl(var(--espresso) / 0.16) 68%,
+        transparent 100%
+      );
+    }
+  }
 }
