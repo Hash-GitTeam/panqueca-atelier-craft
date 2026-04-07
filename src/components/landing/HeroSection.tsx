@@ -69,7 +69,7 @@ const HeroSection = () => {
       ))}
 
       <div
-        className="relative z-10 text-center px-6 max-w-2xl mx-auto pt-20 transition-opacity duration-500 ease-in-out"
+        className="relative z-10 text-center md:text-right px-6 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-16 pt-20 flex flex-col items-center md:items-end transition-opacity duration-500 ease-in-out"
         style={{ opacity: isTransitioning ? 0 : 1 }}
       >
         <p className="font-sans text-xs tracking-[0.3em] uppercase text-foreground/70 mb-8">
