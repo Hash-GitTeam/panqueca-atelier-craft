@@ -21,7 +21,7 @@ const FinalCTASection = () => {
           Pronto para ver de perto?
         </h2>
         <p className="font-sans text-base font-light text-muted-foreground mb-10">
-          Descubra por que os Bodys Over da Panqueca são os Best-Sellers da marca.
+          Descubra por que o Body Over da Panqueca é o Best-Seller da marca.
         </p>
         <a
           href="#produtos"

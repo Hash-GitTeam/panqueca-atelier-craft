@@ -10,9 +10,7 @@ const SensorialSection = () => {
           </h2>
           <div className="space-y-5 font-sans text-base font-light leading-relaxed text-muted-foreground">
             <p>
-              A maciez do moletom que encosta na pele do bebê. O peso leve de quem
-              não sente que está vestido. A costura que não marca. O caimento que
-              acompanha cada movimento.
+              Moletom 100% algodão, ideal para a pele do bebê. Tecido respirável e de alta qualidade. A costura que não marca, que não machuca. O caimento que acompanha o movimento.
             </p>
             <p>
               Algumas coisas só se entendem ao toque. E quando você sentir,
