@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import heroImageDad from "@/assets/hero-panqueca.jpg";
+import heroImageDad from "@/assets/hero-panqueca-desktop.webp";
 import heroImageDadMobile from "@/assets/hero-panqueca-mobile.webp";
 import heroImageMobile2 from "@/assets/hero-panqueca-mobile-2.webp";
 

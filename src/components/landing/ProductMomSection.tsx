@@ -5,22 +5,19 @@ const ProductMomSection = () => {
     <section className="py-20 md:py-28 px-6 bg-card">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="order-2 md:order-1">
-          <p className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">
-            Best seller
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-5">
             Body Over Mom's Mini
           </h2>
           <p className="font-sans text-base font-light leading-relaxed text-muted-foreground mb-8">
-            O colo da mãe traduzido em roupa. Suavidade no toque, leveza no
+            O colo da mãe traduzido em roupa. Conforto no toque, leveza no
             caimento e a delicadeza de quem cuida nos mínimos detalhes.
           </p>
           <ul className="space-y-3 mb-10">
             {[
-              "Algodão premium com acabamento delicado",
+              "Moletom macio 100% algodão",
               "Modelagem over exclusiva Panqueca",
-              "Botões de pressão funcionais",
-              "Cores: caramelo e bege natural",
+              "Botões de pressão para facilitar a troca",
+              "Cores: marrom escuro e caramelo",
             ].map((f, i) => (
               <li key={i} className="font-sans text-sm text-foreground/70 flex items-start gap-2">
                 <span className="block w-1 h-1 rounded-full bg-caramel mt-2 flex-shrink-0" />

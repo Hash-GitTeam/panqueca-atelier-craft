@@ -15,9 +15,6 @@ const ProductDadSection = () => {
           />
         </div>
         <div>
-          <p className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mb-3">
-            Best seller
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-5">
             Body Over Dad's Mini
           </h2>
@@ -27,7 +24,7 @@ const ProductDadSection = () => {
           </p>
           <ul className="space-y-3 mb-10">
             {[
-              "Moletom macio com toque aveludado",
+              "Moletom macio 100% algodão",
               "Modelagem over exclusiva Panqueca",
               "Botões de pressão para facilitar a troca",
               "Cores: marrom escuro e caramelo",
