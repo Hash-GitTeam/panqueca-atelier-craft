@@ -1,22 +1,27 @@
 
 
-## Plano: Reduzir altura da Hero no mobile para mostrar preview da próxima seção
+## Plano: Atualizar banner desktop e textos de 5 seções
 
-### Resumo
-No mobile, trocar `min-h-screen` por uma altura menor (ex: `85vh`) para que o início da seção de informações apareça no primeiro frame. No desktop, manter `min-h-screen`.
+### Alterações
 
-### Alteração
+1. **Banner desktop da Hero** — Copiar `Banner_LP_Panqueca_-_1920x918.webp` para `src/assets/` e atualizar o import em `HeroSection.tsx` para usar a nova imagem no array `desktopSlides`.
 
-**Arquivo:** `src/components/landing/HeroSection.tsx` (linha 60)
+2. **Seção "Modelagem autoral"** (`DifferentialSection.tsx`) — Atualizar os parágrafos conforme texto fornecido (remover referência a "Bodys Over" no plural, ajustar para singular e novo conteúdo).
 
-Trocar:
-```
-className="relative min-h-screen overflow-hidden"
-```
-Por:
-```
-className="relative min-h-[85vh] md:min-h-screen overflow-hidden"
-```
+3. **Seção "Body Over Dad's Mini"** (`ProductDadSection.tsx`) — Atualizar descrição e lista de características. Remover label "Best seller".
 
-Isso faz com que no mobile a imagem ocupe ~85% da tela, deixando visível o topo da seção seguinte e indicando ao usuário que há mais conteúdo abaixo.
+4. **Seção "Body Over Mom's Mini"** (`ProductMomSection.tsx`) — Atualizar descrição e lista de características. Remover label "Best seller".
+
+5. **Seção "Você não pode tocar agora"** (`SensorialSection.tsx`) — Substituir os dois parágrafos pelo novo texto (dois parágrafos).
+
+6. **Seção "Pronto para ver de perto?"** (`FinalCTASection.tsx`) — Atualizar descrição para texto fornecido.
+
+### Arquivos editados
+- `src/assets/hero-panqueca-desktop.webp` (novo arquivo)
+- `src/components/landing/HeroSection.tsx`
+- `src/components/landing/DifferentialSection.tsx`
+- `src/components/landing/ProductDadSection.tsx`
+- `src/components/landing/ProductMomSection.tsx`
+- `src/components/landing/SensorialSection.tsx`
+- `src/components/landing/FinalCTASection.tsx`
 
