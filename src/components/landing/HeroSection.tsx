@@ -7,7 +7,7 @@ import heroImageMobile2 from "@/assets/hero-panqueca-mobile-2.webp";
 const desktopSlides = [
   {
     image: heroImageDad,
-    alt: "Bebê com Body Over Dad's Mini Panqueca",
+    alt: "Pai com bebê usando Body Over Dad's Mini Panqueca",
   },
 ];
 
