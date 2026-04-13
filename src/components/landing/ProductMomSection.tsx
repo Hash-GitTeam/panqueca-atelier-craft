@@ -1,4 +1,4 @@
-import momsMini from "@/assets/product-moms-mini.jpg";
+import momsMini from "@/assets/product-moms-mini.webp";
 
 const ProductMomSection = () => {
   return (

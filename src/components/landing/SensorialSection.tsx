@@ -1,4 +1,4 @@
-import sensorialImage from "@/assets/sensorial-texture.jpg";
+import sensorialImage from "@/assets/sensorial-texture.webp";
 
 const SensorialSection = () => {
   return (

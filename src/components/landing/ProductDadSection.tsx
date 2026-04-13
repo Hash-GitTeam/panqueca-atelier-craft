@@ -1,4 +1,4 @@
-import dadsMini from "@/assets/product-dads-mini.jpg";
+import dadsMini from "@/assets/product-dads-mini.webp";
 
 const ProductDadSection = () => {
   return (

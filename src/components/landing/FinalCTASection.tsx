@@ -1,4 +1,4 @@
-import ctaImage from "@/assets/cta-panqueca.jpg";
+import ctaImage from "@/assets/cta-panqueca.webp";
 
 const FinalCTASection = () => {
   return (
