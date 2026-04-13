@@ -1,5 +1,5 @@
-import dadsMini from "@/assets/product-dads-mini.jpg";
-import momsMini from "@/assets/product-moms-mini.jpg";
+import dadsMini from "@/assets/product-dads-mini.webp";
+import momsMini from "@/assets/product-moms-mini.webp";
 
 const ProductCard = ({
   image,
