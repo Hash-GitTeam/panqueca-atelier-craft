@@ -18,7 +18,7 @@ const FinalCTASection = () => {
           Panqueca — Ateliê Infantil
         </p>
         <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6">
-          Pronto para ver de perto?
+          Pronto para ver de pertinho?
         </h2>
         <p className="font-sans text-base font-light text-muted-foreground mb-10">
           Descubra por que o Body Over da Panqueca é o Best-Seller da marca.
