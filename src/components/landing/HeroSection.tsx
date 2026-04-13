@@ -71,6 +71,7 @@ const HeroSection = () => {
               width={1200}
               height={800}
               fetchPriority={i === 0 ? "high" : undefined}
+              loading={i === 0 ? "eager" : "lazy"}
             />
           </div>
         ))}
