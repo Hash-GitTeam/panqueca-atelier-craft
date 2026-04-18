@@ -23,6 +23,12 @@ const FinalCTASection = () => {
         <p className="font-sans text-base font-light text-muted-foreground mb-10">
           Descubra por que o Body Over da Panqueca é o Best-Seller da marca.
         </p>
+        <a
+          href="#produtos"
+          className="inline-block font-sans text-sm tracking-wide bg-primary text-primary-foreground px-10 py-4 hover:opacity-90 transition-opacity duration-300"
+        >
+          Ver detalhes
+        </a>
       </div>
     </section>
   );
