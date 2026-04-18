@@ -104,15 +104,9 @@ const HeroSection = () => {
           <h1 className="font-serif text-4xl md:text-6xl font-medium leading-tight mb-4 text-espresso">
             Body Over Dad's / Mom's Mini
           </h1>
-          <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 mb-8 max-w-lg mx-auto">
+          <p className="font-sans text-base md:text-lg font-light leading-relaxed text-foreground/80 max-w-lg mx-auto">
             Modelagem over exclusiva, mais solta e confortável para o dia a dia.
           </p>
-          <a
-            href="#produtos"
-            className="inline-block font-sans text-sm tracking-wide bg-espresso text-white px-8 py-3.5 hover:bg-espresso/90 transition-colors duration-300"
-          >
-            Ver detalhes
-          </a>
         </div>
       </section>
     </>
