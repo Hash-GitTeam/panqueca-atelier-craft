@@ -1,6 +1,8 @@
 
+Encontrei o botão. Ele está dentro do `HeroSection.tsx` (na sub-seção "Info Section" logo abaixo da imagem hero), e não em uma seção separada — por isso pode ter havido confusão antes.
 
-## Alteração de texto na seção final (FinalCTASection)
+## Alteração
 
-Trocar o texto do heading de **"Pronto para ver de perto?"** para **"Pronto para ver de pertinho?"** no arquivo `src/components/landing/FinalCTASection.tsx`, linha do `<h2>`.
+Remover o link/botão "Ver detalhes" (linhas 110-115) do arquivo `src/components/landing/HeroSection.tsx`, mantendo todo o restante da seção (texto "Panqueca — Ateliê Infantil", título "Body Over Dad's / Mom's Mini" e o parágrafo de descrição).
 
+Após a remoção, a "Info Section" terminará no parágrafo de descrição, sem CTA.
