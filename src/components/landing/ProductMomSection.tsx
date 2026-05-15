@@ -14,9 +14,9 @@ const ProductMomSection = () => {
           </p>
           <ul className="space-y-3 mb-10">
             {[
-              "Moletom macio 100% algodão",
+              "Fechamento com botões de pressão nas costas",
               "Modelagem over exclusiva Panqueca",
-              "Botões de pressão para facilitar a troca",
+              "Botões de pressão no entre pernas para facilitar a troca",
               "Cores: marrom escuro e caramelo",
             ].map((f, i) => (
               <li key={i} className="font-sans text-sm text-foreground/70 flex items-start gap-2">
