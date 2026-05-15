@@ -72,9 +72,9 @@ const ProductsSection = () => {
             subtitle="Best seller"
             description="A referência do pai, no tamanho do filho. Oversized, macio, com identidade própria."
             features={[
-              "Moletom macio com toque aveludado",
+              "Fechamento com botões de pressão nas costas",
               "Modelagem over exclusiva Panqueca",
-              "Botões de pressão para facilitar a troca",
+              "Botões de pressão no entre pernas para facilitar a troca",
               "Cores: marrom escuro e caramelo",
             ]}
           />
